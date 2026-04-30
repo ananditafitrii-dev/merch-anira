@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -93,6 +92,108 @@ body {
     width: 100%;
 }
 
+#home {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-areas:
+        "text slider"
+        "button slider"
+        "stats slider"
+        "service service";
+    align-items: center;
+    gap: 40px;
+    padding: 80px 8%;
+    min-height: 80vh;
+}
+
+.about {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ef8a79;
+}
+
+.service {
+    grid-area: service;
+    width: 100%;
+    margin-top: 80px;
+    background: none;
+}
+
+.service h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    color: #ad5242;
+    margin-bottom: 40px;
+}
+
+.hero-text-box {
+    grid-area: text;
+}
+
+.action-area {
+    grid-area: button;
+}
+
+.stats-card {
+    grid-area: stats;
+}
+
+.carousel-wrapper {
+    grid-area: slider;
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stats-box {
+    display: flex;
+    gap: 30px;
+    margin-top: 5px;
+}
+
+.stats-box div {
+    padding: 0 20px;
+}
+
+.stats-box div:not(:last-child) {
+    border-right: 2px solid #ccc;
+}
+
+.stats-box h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2b6b63;
+}
+
+.stats-box p {
+    font-size: 1.1rem;
+}
+
+.about {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ef8a79;
+}
+
+.btn-order {
+    background-color: #2b6b63;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-order:hover {
+    background-color: #ef8a79;
+    transform: scale(1.05);
+}
+
 #about-us {
     padding: 80px 8%;
 }
@@ -125,11 +226,13 @@ body {
 }
 
 .about-text h1 .about {
-    color: #2b6b63; /* Hijau teal */
+    color: #2b6b63;
+    /* Hijau teal */
 }
 
 .about-text h1 .us {
-    color: #F28C7A; /* Coral */
+    color: #F28C7A;
+    /* Coral */
 }
 
 .section-content h2,
@@ -270,7 +373,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 500px;
-    height: 350px;
+    height: 450px;
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
@@ -301,21 +404,25 @@ body {
     0% {
         opacity: 0;
     }
+
     8% {
         opacity: 1;
     }
+
     30% {
         opacity: 1;
     }
+
     38% {
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
 }
 
-    @media (max-width: 992px) {
+@media (max-width: 992px) {
     .navbar {
         flex-direction: column;
         padding: 15px 5%;
